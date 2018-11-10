@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 // </copyright>
-// --------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------t--------------------------------------------------------------------
 
 namespace SportsStore.WebUI.DependencyResolution {
     using SportsStore.Domain.Abstract;
@@ -31,7 +31,7 @@ namespace SportsStore.WebUI.DependencyResolution {
 					scan.With(new ControllerConvention());
                 });
             For<IProductRepository>().Use<EFProductRepository>();
-            //For<IExample>().Use<Example>();
+            For<IOrderProcessor>().Use<EmailOrderProcesorr>();
         }
 
         #endregion
